@@ -11,12 +11,14 @@ body {
 
 h1 {
     color: rgb(83, 49, 156);
+    margin: 32px 0 64px 0;
 }
 
 .container {
     background-color: rgb(254, 254, 254);
     width: 100%;
     max-width: 900px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -136,6 +138,7 @@ h1 {
 .slider {
     width: 100%;
     position: relative;
+    margin-bottom: 16px;
 }
 
 .slider .bar {
@@ -172,6 +175,7 @@ h1 {
     border-radius: 50%;
     position: absolute;
     left: 30%;
+    transition: 0.15s transform ease;
 }
 
 .bar .point:hover {
@@ -187,4 +191,82 @@ h1 {
     padding: 0;
     color: rgb(166, 166, 166);
     font-weight: bold;
+}
+
+.card-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: rgb(250, 247, 255);
+    margin: 16px;
+    padding: 16px 32px;
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(83, 49, 156);
+    font-weight: bold;
+    box-shadow: 0px 3px 11px 1px rgb(0, 0, 0, 0.1);
+    position: relative;
+    transition: 0.15s transform ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card .top-section {
+    padding: 8px;
+}
+
+.card .top-section p {
+    text-transform: uppercase;
+    margin: 4px;
+}
+
+.top-section .price {
+    color: rgb(44, 44, 44);
+    font-size: 40px;
+    margin: 0;
+}
+
+.card hr {
+    border: 1px solid rgb(210, 210 ,210);
+    border-radius: 2px;
+    width: 30%;
+}
+
+.card button {
+    background-color: rgb(83, 49, 156);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 16px 20px;
+    margin: 8px 0;
+    transition: 0.15s transform ease;
+}
+
+.card button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card .save-label {
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(53, 10, 74, 1) 36%,
+        rgba(83, 49, 156, 1) 100%
+    );
+    color: white;
+    width: 100%;
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    top: -24px;
+    left: 0;
 }
